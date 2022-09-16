@@ -224,8 +224,10 @@
    -------------------------------------------------------------------- */
   
    #about .profile-pic { 
-   order: 1;
-    justify-self: center;
+      order: 1;
+      justify-self: center;
+      justify-content: center;
+      justify-items: center;
     }
    #about .download .button {
       width: 100%;
