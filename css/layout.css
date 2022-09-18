@@ -211,9 +211,10 @@ ul#nav li.current a { color: #F06000; }
   justify-self: center;
   align-self: center;
   vertical-align: middle;
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
+  width: 100%;
+  height: 150%;
+  border-radius: 5px;
+  
 }
 #about .contact-details { width: 41.66667%; }
 #about .download {
