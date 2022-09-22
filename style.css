@@ -695,22 +695,24 @@ justify-content: center;
 }
 #Front-End{
 
-width: 80%;
+width: 90%;
 height: 100%;
-gap: 18px;
+gap: 10px;
 margin-left: 20px;
 justify-content: center;
 border-radius: 5px;
 margin-bottom: 20px;
-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-background-color: #d9e8e8;
+background-color:rgb(43, 40, 40);
+  color: white;
 
 }
 #Front-End p,h2{
 text-align: center;
 margin-top: 20px;
+color: white;
 
 }
+
 #Front-End h2{
 margin-top: 20px;
 
@@ -718,7 +720,7 @@ margin-top: 20px;
 #Front-End  p{
 margin-top: 10px;
 font-size: medium;
-color: #333;
+color: white;
 }
 
 #Front-End:hover {
@@ -781,11 +783,16 @@ text-align: center;
 width: auto;
 position: relative;
   text-align: center;
-  font-size: 30px;
-  font-weight: 500;
+  font-size: 25px;
+  font-weight: bold;
   margin-bottom: 60px;
   padding-bottom: 20px;
   font-family: "Arial", sans-serif;
+  color: rgba(255, 255, 255, 0.775);
+}
+#skill{
+  background-color: #111;
+
 }
 
 
@@ -879,9 +886,8 @@ height: 60%;
 width: 60%;
 margin: auto;
 text-align: center;
-  font-size: 30px;
-  font-weight: bold;
-  font-weight: 500;
+font-size: 25px;
+font-weight: bold;
   margin-bottom: 60px;
   padding-bottom: 20px;
   font-family: "Arial", sans-serif;
@@ -894,3 +900,63 @@ width: auto;
 position: relative;
   
 }
+
+/* github calender */
+#gitcal {
+  height: 60%;
+  width: 60%;
+  margin: auto;
+  text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    font-family: "Arial", sans-serif;
+    color: #111;
+
+}
+#gitcal h2{
+  color: #111;
+}
+.calendar{
+  margin: auto;
+  width: 90%;
+}
+@media only screen and (max-width: 600px) {
+  .calendar{
+    width: 80%;
+    margin: auto;
+    
+  }
+}
+@media (min-width: 1025px) and (max-width: 1280px){
+  .calendar{
+    width: 80%;
+    margin: auto;
+    
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px){
+  .calendar{
+    width: 80%;
+    margin: auto;
+    
+  }
+}
+@media (min-width: 481px) and (max-width: 767px) {
+  .calendar{
+    width: 80%;
+    margin: auto;
+    
+  }
+}
+@media (max-width: 480px) {
+  .calendar{
+    width: 80%;
+    margin: auto;
+    
+  }
+}
+ 
+/* end github calender */

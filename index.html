@@ -61,8 +61,8 @@
     <!-- about section start -->
     <section class="about" id="about">
         <div class="max-width">
-            <h2 class="title">About me</h2>
-            <div class="about-content">
+            <h2 class="title" style="color:black;">ABOUT ME</h2>
+            <div class=" about-content">
                 <div class="column left">
                     <img src="./images/k.jpg">
                 </div>
@@ -108,6 +108,30 @@
             </div>
         </div>
         </div>
+    </section>
+
+    <!-- ============================Github Calender===================================== -->
+    <!-- ============================Github Calender===================================== -->
+    <section>
+        <div id="gitcal">
+            <h2>MY GITHUB CONTRIBUTION</h2>
+        </div>
+        <script src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"></script>
+
+        <!-- Optionally, include the theme (if you don't want to struggle to write the CSS) -->
+        <link rel="stylesheet" href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css" />
+
+        <!-- Prepare a container for your calendar. -->
+        <div class="calendar">
+            <!-- Loading stuff -->
+            Loading the data just for you.
+        </div>
+
+        <script>
+            GitHubCalendar(".calendar", "komalkopnar622");
+            // or enable responsive functionality
+            GitHubCalendar(".calendar", "komalkopnar622", { responsive: true });
+        </script>
     </section>
 
     <!--==================== SKILLS ====================-->
@@ -232,7 +256,7 @@
     <!-- project section start -->
     <section class="project" id="project">
         <div class="max-width">
-            <h2 class="title">Projects</h2>
+            <h2 class="title">PROJECTS</h2>
             <div class="carousel owl-carousel">
                 <div class="card">
                     <div class="box">
@@ -325,7 +349,7 @@
     <!-- contact section start -->
     <section class="contact" id="contact">
         <div class="max-width">
-            <h2 class="title">Contact me</h2>
+            <h2 class="title" style="color:black;">CONTACT ME</h2>
             <div class="contact-content">
                 <div class="column left">
                     <div class="text">Get in Touch</div>
