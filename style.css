@@ -832,7 +832,7 @@ text-align: left;
 .xxx a{
   border: 1px solid #bdbdbd;
   padding: 10px 20px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
 }
 #techstack{
 
@@ -870,7 +870,7 @@ color: #0609d6;
 }
 @media (max-width: 480px)  {
 .xxx{
-  width: auto;
+  width: 80%;
   margin: 70px auto 20px;
   border: 1px solid transparent;
   display: grid;
