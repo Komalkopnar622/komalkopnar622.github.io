@@ -920,8 +920,9 @@ position: relative;
   color: #111;
 }
 .calendar{
+  padding: 20px;
   margin: auto;
-  width: 90%;
+  width: 60%;
 }
 @media only screen and (max-width: 600px) {
   .calendar{
