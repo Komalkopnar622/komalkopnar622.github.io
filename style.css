@@ -374,6 +374,11 @@ section .title::after {
   border: 1px solid white;
   justify-content: center;
   align-items: center;
+  border-radius: 5px;
+  background-color:rgb(63, 87, 63);
+}
+.repo-div:hover{
+  background-color: #111;
 }
 
 .demo-div {
@@ -382,6 +387,11 @@ section .title::after {
   border: 1px solid white;
   justify-content: center;
   align-items: center;
+  border-radius: 5px;
+  background-color:rgb(47, 68, 47);
+}
+.demo-div:hover{
+  background-color:#111;
 }
 .techStack {
   color: purple;
@@ -916,6 +926,11 @@ position: relative;
     color: #111;
 
 }
+.graph{
+  margin: auto;
+  width: 60%;
+
+}
 #gitcal h2{
   color: #111;
 }
@@ -923,6 +938,11 @@ position: relative;
   padding: 20px;
   margin: auto;
   width: 60%;
+  background-color:#111;
+  color:#bdbdbd;
+  font-family: "Arial", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
 }
 @media only screen and (max-width: 600px) {
   .calendar{
@@ -959,5 +979,8 @@ position: relative;
     
   }
 }
+
+
+
  
 /* end github calender */
