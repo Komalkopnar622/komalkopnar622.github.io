@@ -144,6 +144,7 @@ section .title::after {
 }
 .scroll-up-btn {
   position: fixed;
+  
   height: 45px;
   width: 42px;
   background: #000;
