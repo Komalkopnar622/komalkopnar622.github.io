@@ -94,7 +94,8 @@ section .title::after {
 }
 .navbar.sticky {
   padding: 15px 0;
-  background: #75428a;
+  background:#222;
+  color: white;
 }
 .navbar .max-width {
   display: flex;
@@ -132,7 +133,7 @@ section .title::after {
   color: #fff;
 }
 .navbar.sticky .menu li a{
-  color: #000;
+  color:#fff;
 }
 /* menu btn styling */
 .menu-btn {
