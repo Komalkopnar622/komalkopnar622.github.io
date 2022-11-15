@@ -45,7 +45,8 @@ html::-webkit-scrollbar-track {
 
 html::-webkit-scrollbar-thumb {
   /* background: #420177; */
-  background: #00d9ff;
+  /* background: #00d9ff; */
+  background-color: #111;
 }
 
 /* navbar starts */
@@ -128,7 +129,7 @@ header .navbar ul li a:hover {
 #menu {
   font-size: 3rem;
   cursor: pointer;
-  color:#00d9ff;
+  color:#111;
   display: none;
 }
 
@@ -145,7 +146,7 @@ header .navbar ul li a:hover {
     height: 100%;
     text-align: left;
     align-items: flex-start;
-    background-color: #00d9ff;
+    background-color:#111;
   }
 
   header .navbar ul {
@@ -393,12 +394,12 @@ header .navbar ul li a:hover {
 }
 
 .about .heading span {
-  color: #00d9ff;
+  color:rgba(255, 255, 255, 0.76);
 }
 
 .about .heading {
   /* color:#00d9ff; */
-  color: #00d9ff;
+  color:rgba(255, 255, 255, 0.76);
 }
 
 .about .row {
@@ -552,13 +553,15 @@ header .navbar ul li a:hover {
 
 .work h2 {
   /* color: #fff; */
-  color:#00d9ff;
+  /* color:#00d9ff; */
+  color:white;
   padding: 1rem;
 }
 
 .work .heading  {
   /* color: rgb(255, 230, 0); */
-  color: #00d9ff;
+  /* color: #00d9ff; */
+  color:rgba(255, 255, 255, 0.76);
   
 }
 
@@ -567,7 +570,7 @@ header .navbar ul li a:hover {
   flex-wrap: wrap;
   gap: 1.5rem;
   margin: 2rem;
-  background:black;
+  background:#111;
   /* background: rgb(255, 255, 255); */
 }
 .work .box-container .tag {
@@ -579,7 +582,7 @@ header .navbar ul li a:hover {
   width: 100%;
   padding-left: 1rem;
   color: white;
-  background: #00d9ff;
+  background:#111;
 }
 .work .box-container .tag h3 {
   font-size: 2rem;
@@ -748,7 +751,7 @@ header .navbar ul li a:hover {
 .skills .heading {
   /* color: rgb(255, 230, 0); */
   /* color: #002057; */
-  color: #00d9ff
+  color:rgba(255, 255, 255, 0.76);
 }
 
 .skills .container {
@@ -866,7 +869,7 @@ background: #111;
 }
 
 .stat .heading  {
-  color: #00d9ff;
+  color:rgba(255, 255, 255, 0.76);
 }
 
 .stat .calendar {
@@ -909,7 +912,7 @@ background: #111;
 }
 
 .contact .heading {
-  color: #00d9ff;
+  color:rgba(255, 255, 255, 0.76);
 }
 
 .contact .container {
