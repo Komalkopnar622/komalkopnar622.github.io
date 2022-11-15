@@ -1,82 +1,221 @@
 $(document).ready(function () {
-    $(window).scroll(function () {
-      // sticky navbar on scroll script
-      if (this.scrollY > 20) {
-        $(".navbar").addClass("sticky");
-      } else {
-        $(".navbar").removeClass("sticky");
-      }
-  
-      // scroll-up button show/hide script
-      if (this.scrollY > 500) {
-        $(".scroll-up-btn").addClass("show");
-      } else {
-        $(".scroll-up-btn").removeClass("show");
-      }
+
+    $('#menu').click(function () {
+        $(this).toggleClass('fa-times');
+        $('.navbar').toggleClass('nav-toggle');
     });
-  
-    // slide-up script
-    $(".scroll-up-btn").click(function () {
-      $("html").animate({ scrollTop: 0 });
-      // removing smooth scroll on slide-up button click
-      $("html").css("scrollBehavior", "auto");
+
+    $(window).on('scroll load', function () {
+        $('#menu').removeClass('fa-times');
+        $('.navbar').removeClass('nav-toggle');
+
+        if (window.scrollY > 60) {
+            document.querySelector('#scroll-top').classList.add('active');
+        } else {
+            document.querySelector('#scroll-top').classList.remove('active');
+        }
+
+        // scroll spy
+        $('section').each(function () {
+            let height = $(this).height();
+            let offset = $(this).offset().top - 200;
+            let top = $(window).scrollTop();
+            let id = $(this).attr('id');
+
+            if (top > offset && top < offset + height) {
+                $('.navbar ul li a').removeClass('active');
+                $('.navbar').find(`[href="#${id}"]`).addClass('active');
+            }
+        });
     });
-  
-    $(".navbar .menu li a").click(function () {
-      // applying again smooth scroll on menu items click
-      $("html").css("scrollBehavior", "smooth");
+
+    // smooth scrolling
+    $('a[href*="#"]').on('click', function (e) {
+        e.preventDefault();
+        $('html, body').animate({
+            scrollTop: $($(this).attr('href')).offset().top,
+        }, 500, 'linear')
     });
-  
-    // toggle menu/navbar script
-    $(".menu-btn").click(function () {
-      $(".navbar .menu").toggleClass("active");
-      $(".menu-btn i").toggleClass("active");
+
+    // <!-- emailjs to mail contact form data -->
+    // $("#contact-form").submit(function (event) {
+    //     emailjs.init("user_TTDmetQLYgWCLzHTDgqxm");
+
+    //     emailjs.sendForm('contact_service', 'template_contact', '#contact-form')
+    //         .then(function (response) {
+    //             console.log('SUCCESS!', response.status, response.text);
+    //             document.getElementById("contact-form").reset();
+    //             alert("Form Submitted Successfully");
+    //         }, function (error) {
+    //             console.log('FAILED...', error);
+    //             alert("Form Submission Failed! Try Again");
+    //         });
+    //     event.preventDefault();
+    // });
+    // <!-- emailjs to mail contact form data -->
+});
+
+// <!-- typed js effect starts -->
+var typed = new Typed(".typing-text", {
+    strings: ["Java Backend Developer"],
+    loop: true,
+    typeSpeed: 50,
+    backSpeed: 25,
+    backDelay: 500,
+});
+// <!-- typed js effect ends -->
+
+async function fetchData(type = "skills") {
+    let response
+    type === "skills" ?
+        response = await fetch("./json file/skills.json")
+        :
+        response = await fetch("./json file/projects.json")
+    const data = await response.json();
+    return data;
+}
+
+function showSkills(skills) {
+    let skillsContainer = document.getElementById("skillsContainer");
+    let skillHTML = "";
+    skills.forEach(skill => {
+        skillHTML += `
+        <div class="bar">
+              <div class="info">
+                <img src=${skill.icon} alt="skill" />
+                <span>${skill.name}</span>
+              </div>
+            </div>`
     });
-  
-    // typing text animation script
-    var typed = new Typed(".typing", {
-      strings: ["Back-End Developer", "Believer"],
-      typeSpeed: 100,
-      backSpeed: 60,
-      loop: true,
+    skillsContainer.innerHTML = skillHTML;
+}
+
+function showProjects(projects) {
+    let projectsContainer = document.querySelector("#work .box-container");
+    let projectHTML = "";
+    projects.slice(0, 10).forEach(project => {
+        projectHTML += `
+        <div class="tilt">
+            <div class="tag">
+                <h3>${project.name}</h3>
+            </div>
+            <div class="box">
+                <img draggable="false" src="/image/${project.image}.png" alt="project" />
+                <div class="content">
+                <div class="desc">
+                <p>${project.desc}</p>
+                <b><span>Tech Stack:</span> </b><img src="${project.src}" alt="${project.alter}">
+                <div class="btns">
+                  <a href="${project.links.view}" class="btn" target="_blank"><i class="fas fa-eye"></i> View</a>
+                  <a href="${project.links.code}" class="btn" target="_blank">Code <i class="fas fa-code"></i></a>
+                </div>
+              </div>
+            </div>
+            </div>
+        </div>`
     });
-  
-    var typed = new Typed(".typing-2", {
-      strings: ["Back-End Developer", "Believer"],
-      typeSpeed: 100,
-      backSpeed: 60,
-      loop: true,
+    projectsContainer.innerHTML = projectHTML;
+
+    // <!-- tilt js effect starts -->
+    VanillaTilt.init(document.querySelectorAll(".tilt"), {
+        max: 15,
     });
-  
-    // owl carousel script
-    $(".carousel").owlCarousel({
-      margin: 20,
-    loop: false,
-      autoplay: false,   //for carousel effect turn it true
-      autoplayTimeOut: 2000,
-      autoplayHoverPause: true,
-      responsive: {
-        0: {
-          items: 1,
-          nav: false,
-        },
-        600: {
-          items: 2,
-          nav: false,
-        },
-        1000: {
-          items: 3,
-          nav: false,
-        },
-      },
+    // <!-- tilt js effect ends -->
+
+    /* ===== SCROLL REVEAL ANIMATION ===== */
+    const srtop = ScrollReveal({
+        origin: 'top',
+        distance: '80px',
+        duration: 1000,
+        reset: true
     });
-  });
-  function submitForm() {
-     
-     var frm = document.getElementById('my_form');
-     frm.submit(); // Submit the form
-     frm.reset();  // Reset all form data
-     return false; // Prevent page refresh
-  }
-  
-  
+
+    /* SCROLL PROJECTS */
+    srtop.reveal('.work .box', { interval: 200 });
+
+}
+
+fetchData().then(data => {
+    showSkills(data);
+});
+
+fetchData("projects").then(data => {
+    showProjects(data);
+});
+
+// <!-- tilt js effect starts -->
+VanillaTilt.init(document.querySelectorAll(".tilt"), {
+    max: 15,
+});
+// <!-- tilt js effect ends -->
+
+// disable developer mode
+document.onkeydown = function (e) {
+    if (e.keyCode == 123) {
+        return false;
+    }
+    if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
+        return false;
+    }
+    if (e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) {
+        return false;
+    }
+    if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
+        return false;
+    }
+    if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
+        return false;
+    }
+}
+
+// copy pasted or right click
+// $(document).bind("contextmenu",function(e){
+//     return false;
+//       });
+
+/* ===== SCROLL REVEAL ANIMATION ===== */
+const srtop = ScrollReveal({
+    origin: 'top',
+    distance: '80px',
+    duration: 1000,
+    reset: true
+});
+
+/* SCROLL HOME */
+srtop.reveal('.home .content h3', { delay: 200 });
+srtop.reveal('.home .content p', { delay: 200 });
+srtop.reveal('.home .content .btn', { delay: 200 });
+
+srtop.reveal('.home .image', { delay: 400 });
+srtop.reveal('.home .linkedin', { interval: 600 });
+srtop.reveal('.home .github', { interval: 800 });
+srtop.reveal('.home .twitter', { interval: 1000 });
+srtop.reveal('.home .telegram', { interval: 600 });
+srtop.reveal('.home .instagram', { interval: 600 });
+srtop.reveal('.home .dev', { interval: 600 });
+
+/* SCROLL ABOUT */
+srtop.reveal('.about .content h3', { delay: 200 });
+srtop.reveal('.about .content .tag', { delay: 200 });
+srtop.reveal('.about .content p', { delay: 200 });
+srtop.reveal('.about .content .box-container', { delay: 200 });
+srtop.reveal('.about .content .resumebtn', { delay: 200 });
+
+
+/* SCROLL SKILLS */
+srtop.reveal('.skills .container', { interval: 200 });
+srtop.reveal('.skills .container .bar', { delay: 400 });
+
+
+
+/* SCROLL PROJECTS */
+// srtop.reveal('.work .box', { interval: 200 });
+
+/* SCROLL STATICS */
+srtop.reveal('.stat .github_stat', { interval: 200 });
+
+
+
+/* SCROLL CONTACT */
+srtop.reveal('.contact .container', { delay: 400 });
+srtop.reveal('.contact .container .form-group', { delay: 400 });

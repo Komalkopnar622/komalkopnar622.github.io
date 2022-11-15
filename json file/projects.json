@@ -1,0 +1,41 @@
+[
+    {
+        "name": "PharmaEsay-Clone",
+        "desc": "This is a cloned site from the original one of an E-commerce website that sells medicines products",
+        "src": "https://skillicons.dev/icons?i=html,css,javascript,github",
+        "alter":"HTML,CSS,JavaScript",
+        "image": "pharma",
+        "category": "frontend",
+        "links": {
+            
+            "code": "https://github.com/VinayPathania/Team-Spartans.git",
+            "view": "https://cute-jalebi-e15c39.netlify.app/"
+        }
+    },
+    {
+        "name": "Memory.ai-Clone",
+        "desc": "This automatically tracks the record of employees and how much time they have given to the project they categorize too.",
+        "src": "https://skillicons.dev/icons?i=html,css,javascript,github",
+        "alter":"HTML,CSS,JavaScript",
+        "image": "Memory",
+        "category": "frontend",
+        "links": {
+            "code": "https://github.com/nileshs23/dear-shade-414.git",
+            "view": "https://fantastic-queijadas-e98c0f.netlify.app/"
+           
+        }
+    },
+    {
+        "name": "Naukri.com-Clone",
+        "desc": "Naukri.com is a recruitment platform that provides hiring-related services to corporates placement agencies, and job seekers in India A collaborative project built by a team of 4 developers in 5 days.",
+        "src": "https://skillicons.dev/icons?i=html,css,javascript,github",
+        "alter":"HTML,CSS,JavaScript",
+        "image": "cms",
+        "category": "frontend",
+        "links": {
+            "view": "https://superlative-semifreddo-e68efc.netlify.app/",
+            "code": "https://github.com/Lahari-1996/Naukri-Clone.git"
+        }
+    }
+    
+]
