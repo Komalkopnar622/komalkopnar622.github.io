@@ -900,6 +900,15 @@ background: #111;
   .stat .github_stat {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
+    width:fit-content;
+  }
+
+}
+@media screen and (max-width: 600px) {
+  .stat .github_stat {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    width:fit-content;
   }
 
 }
