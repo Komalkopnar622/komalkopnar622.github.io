@@ -1,6 +1,19 @@
 [
     {
-        "name": "PharmaEsay-Clone",
+        "name": "Online Cab Booking Application(Backend)",
+        "desc": "REST API for an Online Cab Booking Application. Customers can book any type of cab to travelling different destinations. This API performs all the fundamental CRUD operations.",
+        "src": "https://skillicons.dev/icons?i=java,springboot,mysql,hibernate",
+        "alter":"Java,mysql,springboot",
+        "image": "Onlinecab",
+        "category": "Backend",
+        "links": {
+            
+            "code": "https://github.com/Komalkopnar622/sable-club-7536.git",
+            "view": "https://drive.google.com/file/d/1A4GLwMIph5RsI-8dumCc0qiC4cDm_QAT/view?usp=share_link"
+        }
+    },
+    {
+        "name": "PharmaEsay-Clone (Frontend)",
         "desc": "This is a cloned site from the original one of an E-commerce website that sells medicines products",
         "src": "https://skillicons.dev/icons?i=html,css,javascript,github",
         "alter":"HTML,CSS,JavaScript",
@@ -13,7 +26,7 @@
         }
     },
     {
-        "name": "Memory.ai-Clone",
+        "name": "Memory.ai-Clone (Frontend)",
         "desc": "This automatically tracks the record of employees and how much time they have given to the project they categorize too.",
         "src": "https://skillicons.dev/icons?i=html,css,javascript,github",
         "alter":"HTML,CSS,JavaScript",
@@ -26,7 +39,7 @@
         }
     },
     {
-        "name": "Naukri.com-Clone",
+        "name": "Naukri.com-Clone (Frontend)",
         "desc": "Naukri.com is a recruitment platform that provides hiring-related services to corporates placement agencies, and job seekers in India A collaborative project built by a team of 4 developers in 5 days.",
         "src": "https://skillicons.dev/icons?i=html,css,javascript,github",
         "alter":"HTML,CSS,JavaScript",
