@@ -2,7 +2,7 @@
     {
         "name": "Online Cab Booking Application(Backend)",
         "desc": "REST API for an Online Cab Booking Application. Customers can book any type of cab to travelling different destinations. This API performs all the fundamental CRUD operations.",
-        "src": "https://skillicons.dev/icons?i=java,mysql,hibernate,springboot,",
+        "src": "https://skillicons.dev/icons?i=java,mysql,hibernate,spring",
         "alter":"Java,mysql,springboot",
         "image": "Onlinecab",
         "category": "Backend",
